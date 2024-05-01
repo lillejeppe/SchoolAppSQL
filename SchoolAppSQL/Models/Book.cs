@@ -9,12 +9,12 @@ namespace SchoolAppSQL.Models
 {
     internal class Book
     {
-        int Id { get; set; }
-        string Title { get; set; }
-        string Description { get; set; }
-        double ProductionPrice { get; set; }
-        double ProfitMargin {  get; set; }
-        double MarketPrice { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public double ProductionPrice { get; set; }
+        public double ProfitMargin {  get; set; }
+        public double MarketPrice { get; set; }
 
         public Book()
         {
