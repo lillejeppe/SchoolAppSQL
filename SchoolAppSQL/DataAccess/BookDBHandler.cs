@@ -10,8 +10,19 @@ namespace SchoolAppSQL.DataAccess
 
         public BookDBHandler()
         {
-            //Path til DB, Tjek App.Config for detaljer
             connString = ConfigurationManager.ConnectionStrings["Default"].ToString();
+            //Path til DB, Tjek App.Config for detaljer
+            using SqlConnection conn = new SqlConnection(connString);
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception e)
+            {
+                throw new Exception ("" + e.Message + e.Source + e.StackTrace);
+            }
+            finally { conn.Close(); }
+            
         }
 
 
